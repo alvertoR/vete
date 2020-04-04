@@ -31,6 +31,11 @@ class User extends Database{
 
     }
 
+    public function addProp($cc,$name,$adress,$email,$prof,$rol){
+        $query = $this->conexion()->prepare('insert into prop(cc,nombre,prof,direccion,email,rol)
+                                             values(:cc,:nombre,:prof,:direccion,:email,:rol)');
+        $query->execute([':cc'=>$cc,':nombre'=>$name,':prof'=>$prof,':direccion'=>$adress,':email'=>$email,':rol'=>$rol]);
+    }
 
     public function setUser($cc,$rol){
 

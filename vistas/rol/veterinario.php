@@ -20,6 +20,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Veterinario</title>
+    <script src="../../js/ajax.js"></script>
+    <script src="../../js/registro.js"></script>
 </head>
 <body>
     <h1>Veterinario <?php echo $nombre?></h1>
@@ -29,11 +31,20 @@
     <a href="" id="buscar">Buscar propietario</a>
 
     <div id="registro">
-
+        <from id="new" action="" method="POST">
+            <input type="text" name="name" id="name" placeholder="Nombre"><br>
+            <input type="text" name="cc" id="cc" placeholder="Cédula"><br>
+            <input type="text" name="prof" id="prof" placeholder="Profesión"><br>
+            <input type="text" name="adress" id="adress" placeholder="Dirección"><br>
+            <input type="email" name="email" id="email" placeholder="Algo@ejemplo.com"><br>
+            <input type="button" id="bSend" value="Send">
+        </from>
     </div>
     <div id="busca">
 
     </div>
-    <script src="../../js/ajax.js"></script>
+    
+    
+    
 </body>
 </html>
