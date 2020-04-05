@@ -27,5 +27,6 @@ function newProp(){
     xmlhttp.open("POST","../../includes/newPropietario.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(header);
-
 }
+
+

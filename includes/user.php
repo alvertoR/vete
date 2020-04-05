@@ -31,6 +31,13 @@ class User extends Database{
 
     }
 
+    public function getProp($cc){
+        $query = $this->conexion()->prepare('select*from prop where cc =:cc');
+        $query->execute([':cc'=>$cc]);
+
+        return $query;
+    }
+
     public function addProp($cc,$name,$adress,$email,$prof,$rol){
         $query = $this->conexion()->prepare('insert into prop(cc,nombre,prof,direccion,email,rol)
                                              values(:cc,:nombre,:prof,:direccion,:email,:rol)');

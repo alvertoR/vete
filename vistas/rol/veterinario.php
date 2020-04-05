@@ -22,6 +22,7 @@
     <title>Veterinario</title>
     <script src="../../js/ajax.js"></script>
     <script src="../../js/registro.js"></script>
+    <script src="../../js/busqueda.js"></script>
 </head>
 <body>
     <h1>Veterinario <?php echo $nombre?></h1>
@@ -41,7 +42,13 @@
         </from>
     </div>
     <div id="busca">
+        <form id="newBusca" action="" method="GET">
+            <input type="text" name="cc1" id="cc1" placeholder="Cédula" ><br>
+            <input type="button" id="bShearch" value="Shearch">
+        </form>
+        <div id="mostrar">
 
+        </div>
     </div>
     
     
